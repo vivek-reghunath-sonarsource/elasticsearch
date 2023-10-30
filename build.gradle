@@ -397,3 +397,14 @@ tasks.register("spotlessApply").configure {
   dependsOn gradle.includedBuild('build-tools').task(':reaper:spotlessApply')
   dependsOn gradle.includedBuild('build-tools-internal').task(':spotlessApply')
 }
+plugins {
+  id "org.sonarqube" version "4.3.1.3277"
+}
+
+sonar {
+  properties {
+    property "sonar.projectKey", "vivek-reghunath-sonarsource_elasticsearch_AYuBAIANTjRXavMxW9d0"
+    property "sonar.projectName", "elasticsearch"
+  }
+}
+
